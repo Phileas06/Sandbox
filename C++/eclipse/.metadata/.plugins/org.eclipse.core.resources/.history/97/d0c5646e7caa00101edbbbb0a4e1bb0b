@@ -1,0 +1,9 @@
+#include "iostream"
+
+int main() {
+	const char* firstString = "first ever string built by me in c++"
+	std::string secondString = "this is the new way to make a string";
+
+	std::cout << "Hello World again!" << firstString << secondString;
+	return 0;
+}

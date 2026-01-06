@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello World</h1>
+    <script>
+  fetch('http://157.180.113.178:5000/daten')
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Netzwerk-Antwort war nicht ok');
+    }
+    return response.json();
+  })
+  .then(data => {
+    console.log("Erfolg:", data.nachricht);
+    document.body.innerHTML += `<p>${data.nachricht}</p>`; // Zeigt es auf der Seite an
+  })
+  .catch(error => {
+    console.error('Fehler beim Abrufen:', error);
+  });
+</script>
+</body>
+</html>

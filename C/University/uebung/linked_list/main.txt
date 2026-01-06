@@ -1,0 +1,141 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct Node {
+    struct Node* next;
+    int data;
+} Node, *nodeptr;
+
+typedef struct List {
+    nodeptr first,last;
+} List, *listptr;
+
+List L;
+void initList(listptr L) {
+    L->first = NULL;
+    L->last = NULL;
+}
+
+int isEmpty(listptr L) {
+    return (L->first == NULL && L->last == NULL);
+}
+
+nodeptr newNode(int data) {
+    nodeptr np;
+
+    np = (Node*) malloc(sizeof(Node));
+    np->data = data;
+    np->next = NULL;
+    return np;
+}
+
+void appendFirst(int data, listptr L) {
+    nodeptr np = newNode(data);
+    if (isEmpty(L)) {
+        L->first = np;
+        L->last = np;
+    } else {
+        np->next = L->first;
+        L->first = np;
+    }
+}
+
+void appendLast(int data, listptr L) {
+    nodeptr np = newNode(data);
+    if (isEmpty(L)) {
+        L->first = np;
+        L->last = np;
+    } else {
+        L->last->next = np;
+        L->last = np;
+    }
+}
+
+int Equal(int data1, int data2) {
+    return (data1 == data2);
+}
+
+int isIn(int data, listptr L) {
+    nodeptr np = L->first;
+    while (np != NULL) {
+        if (Equal(np->data, data)) {
+            return 1;
+        } 
+        np = np->next;
+    }
+    return 0;
+}
+
+
+listptr createNewList() {
+    listptr newList = (List*) malloc(sizeof(List));
+    newList->first = NULL;
+    newList->last = NULL;
+    return newList;
+}
+
+void insertBehind(listptr L, int newData, int lastData) {
+    //Guard Clause
+    if (L == NULL || L->first == NULL) return;
+
+    nodeptr np = L->first;
+    while (np != NULL) {
+        if (Equal(lastData, np->data)) {
+            nodeptr newNp = newNode(newData);
+
+            if (L->last == np) {
+                L->last = newNp;
+            }
+            newNp->next = np->next;
+            np->next = newNp;
+            break;
+        }
+        np = np->next;
+    }
+
+}
+
+void Delete(listptr L, int data) {
+    //Guard Clause
+    if (L == NULL || L->first) return; //Liste leer, nichts zu löschen
+
+    if (!isIn(data, L)) return;
+
+    nodeptr np1, np2;
+    np1 = L->first;
+    
+    while (np1 != NULL) {
+        
+    }
+
+}
+
+
+
+
+int main() {
+    listptr newList = createNewList();
+
+    initList(newList);
+
+    int arr[] = {1,2,3,4,5,6,7,8,9,10};
+    for (int i = 0; i < sizeof(arr)/ sizeof(*arr); i++) {
+        appendLast(arr[i], newList);
+    }
+
+    insertBehind(newList, 4,5);
+
+    // Auslesen der Linked List
+    printf("Linked List\n");
+    nodeptr np = newList->first;
+    while (np->data != NULL) {
+        printf("%d\n", np->data);
+        if (np->next != NULL) { //Noch NICHT Ende der Liste
+            np = np->next;
+        } else {
+            break;
+        }
+    }
+
+    return 0;
+}

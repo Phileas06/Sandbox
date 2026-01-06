@@ -1,0 +1,569 @@
+17:20:13 **** Rebuild of configuration Debug for project Test ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Test.o" "..\\src\\Test.cpp" 
+g++ -o Test.exe "src\\Test.o" 
+Info: Nothing to build for Test
+12:23:06 **** Rebuild of configuration Debug for project Learning ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o test.o "..\\test.cpp" 
+..\test.cpp: In function 'int main()':
+..\test.cpp:7:14: error: no match for 'operator>>' (operand types are 'std::ostream' {aka 'std::basic_ostream<char>'} and 'const char [13]')
+    7 |         cout >> "Hello World!" >> endl;
+      |         ~~~~ ^~ ~~~~~~~~~~~~~~
+      |         |       |
+      |         |       const char [13]
+      |         std::ostream {aka std::basic_ostream<char>}
+In file included from C:/mingw64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/string:55,
+                 from C:/mingw64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/locale_classes.h:40,
+                 from C:/mingw64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ios_base.h:41,
+                 from C:/mingw64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ios:44,
+                 from C:/mingw64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ostream:40,
+                 from C:/mingw64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/iostream:41,
+                 from ..\test.cpp:1:
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/basic_string.tcc:823:5: note: candidate: 'template<class _CharT, class _Traits, class _Alloc> std::basic_istream<_CharT, _Traits>& std::operator>>(basic_istream<_CharT, _Traits>&, __cxx11::basic_string<_CharT, _Traits, _Allocator>&)'
+  823 |     operator>>(basic_istream<_CharT, _Traits>& __in,
+      |     ^~~~~~~~
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/basic_string.tcc:823:5: note:   template argument deduction/substitution failed:
+..\test.cpp:7:17: note:   'std::ostream' {aka 'std::basic_ostream<char>'} is not derived from 'std::basic_istream<_CharT, _Traits>'
+    7 |         cout >> "Hello World!" >> endl;
+      |                 ^~~~~~~~~~~~~~
+In file included from C:/mingw64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/memory_resource.h:38,
+                 from C:/mingw64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/string:58:
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cstddef:130:5: note: candidate: 'template<class _IntegerType> constexpr std::__byte_op_t<_IntegerType> std::operator>>(byte, _IntegerType)'
+  130 |     operator>>(byte __b, _IntegerType __shift) noexcept
+      |     ^~~~~~~~
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cstddef:130:5: note:   template argument deduction/substitution failed:
+..\test.cpp:7:9: note:   cannot convert 'std::cout' (type 'std::ostream' {aka 'std::basic_ostream<char>'}) to type 'std::byte'
+    7 |         cout >> "Hello World!" >> endl;
+      |         ^~~~
+In file included from C:/mingw64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/istream:1106,
+                 from C:/mingw64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/iostream:42:
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/istream.tcc:975:5: note: candidate: 'template<class _CharT, class _Traits> std::basic_istream<_CharT, _Traits>& std::operator>>(basic_istream<_CharT, _Traits>&, _CharT&)'
+  975 |     operator>>(basic_istream<_CharT, _Traits>& __in, _CharT& __c)
+      |     ^~~~~~~~
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/istream.tcc:975:5: note:   template argument deduction/substitution failed:
+..\test.cpp:7:17: note:   'std::ostream' {aka 'std::basic_ostream<char>'} is not derived from 'std::basic_istream<_CharT, _Traits>'
+    7 |         cout >> "Hello World!" >> endl;
+      |                 ^~~~~~~~~~~~~~
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/istream:846:5: note: candidate: 'template<class _Traits> std::basic_istream<char, _Traits>& std::operator>>(basic_istream<char, _Traits>&, unsigned char&)'
+  846 |     operator>>(basic_istream<char, _Traits>& __in, unsigned char& __c)
+      |     ^~~~~~~~
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/istream:846:5: note:   template argument deduction/substitution failed:
+..\test.cpp:7:17: note:   'std::ostream' {aka 'std::basic_ostream<char>'} is not derived from 'std::basic_istream<char, _Traits>'
+    7 |         cout >> "Hello World!" >> endl;
+      |                 ^~~~~~~~~~~~~~
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/istream:851:5: note: candidate: 'template<class _Traits> std::basic_istream<char, _Traits>& std::operator>>(basic_istream<char, _Traits>&, signed char&)'
+  851 |     operator>>(basic_istream<char, _Traits>& __in, signed char& __c)
+      |     ^~~~~~~~
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/istream:851:5: note:   template argument deduction/substitution failed:
+..\test.cpp:7:17: note:   'std::ostream' {aka 'std::basic_ostream<char>'} is not derived from 'std::basic_istream<char, _Traits>'
+    7 |         cout >> "Hello World!" >> endl;
+      |                 ^~~~~~~~~~~~~~
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/istream:893:5: note: candidate: 'template<class _CharT, class _Traits> std::basic_istream<_CharT, _Traits>& std::operator>>(basic_istream<_CharT, _Traits>&, _CharT*)'
+  893 |     operator>>(basic_istream<_CharT, _Traits>& __in, _CharT* __s)
+      |     ^~~~~~~~
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/istream:893:5: note:   template argument deduction/substitution failed:
+..\test.cpp:7:17: note:   'std::ostream' {aka 'std::basic_ostream<char>'} is not derived from 'std::basic_istream<_CharT, _Traits>'
+    7 |         cout >> "Hello World!" >> endl;
+      |                 ^~~~~~~~~~~~~~
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/istream:936:5: note: candidate: 'template<class _Traits> std::basic_istream<char, _Traits>& std::operator>>(basic_istream<char, _Traits>&, unsigned char*)'
+  936 |     operator>>(basic_istream<char, _Traits>& __in, unsigned char* __s)
+      |     ^~~~~~~~
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/istream:936:5: note:   template argument deduction/substitution failed:
+..\test.cpp:7:17: note:   'std::ostream' {aka 'std::basic_ostream<char>'} is not derived from 'std::basic_istream<char, _Traits>'
+    7 |         cout >> "Hello World!" >> endl;
+      |                 ^~~~~~~~~~~~~~
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/istream:942:5: note: candidate: 'template<class _Traits> std::basic_istream<char, _Traits>& std::operator>>(basic_istream<char, _Traits>&, signed char*)'
+  942 |     operator>>(basic_istream<char, _Traits>& __in, signed char* __s)
+      |     ^~~~~~~~
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/istream:942:5: note:   template argument deduction/substitution failed:
+..\test.cpp:7:17: note:   'std::ostream' {aka 'std::basic_ostream<char>'} is not derived from 'std::basic_istream<char, _Traits>'
+    7 |         cout >> "Hello World!" >> endl;
+      |                 ^~~~~~~~~~~~~~
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/istream:1096:5: note: candidate: 'template<class _Istream, class _Tp> _Istream&& std::operator>>(_Istream&&, _Tp&&)'
+ 1096 |     operator>>(_Istream&& __is, _Tp&& __x)
+      |     ^~~~~~~~
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/istream:1096:5: note:   template argument deduction/substitution failed:
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/istream: In substitution of 'template<class _Istream, class _Tp> _Istream&& std::operator>>(_Istream&&, _Tp&&) [with _Istream = std::basic_ostream<char>&; _Tp = const char (&)[13]]':
+..\test.cpp:7:10:   required from here
+C:/mingw64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/istream:1096:5: error: no type named 'type' in 'struct std::enable_if<false, void>'
+Info: Nothing to build for Systemtest
+12:23:10 **** Rebuild of configuration Debug for project Test ****
+Info: Internal Builder is used for build
+g++ "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Test.o" "..\\src\\Test.cpp" 
+g++ "-LC:\\boost\\libs" -o Test.exe "src\\Test.o" -lws2_32 
+12:29:27 **** Incremental Build of configuration Debug for project Learning ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o test.o "..\\test.cpp" 
+g++ -o Learning.exe test.o 
+Info: Nothing to build for Systemtest
+Info: Nothing to build for Test
+Info: Nothing to build for Learning
+Info: Nothing to build for Learning
+Info: Nothing to build for Learning
+12:34:49 **** Incremental Build of configuration Debug for project Learning ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o test.o "..\\test.cpp" 
+..\test.cpp: In function 'int main()':
+..\test.cpp:4:31: error: array must be initialized with a brace-enclosed initializer
+    4 |         char* firstString[] = "classic String with Pointer";
+      |                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Info: Nothing to build for Systemtest
+Info: Nothing to build for Test
+12:34:51 **** Incremental Build of configuration Debug for project Learning ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o test.o "..\\test.cpp" 
+..\test.cpp: In function 'int main()':
+..\test.cpp:4:31: error: array must be initialized with a brace-enclosed initializer
+    4 |         char* firstString[] = "classic String with Pointer";
+      |                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+12:35:05 **** Incremental Build of configuration Debug for project Learning ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o test.o "..\\test.cpp" 
+..\test.cpp: In function 'int main()':
+..\test.cpp:4:29: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+    4 |         char* firstString = "classic String with Pointer";
+      |                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+g++ -o Learning.exe test.o 
+Info: Nothing to build for Systemtest
+Info: Nothing to build for Test
+Info: Nothing to build for Learning
+12:39:46 **** Incremental Build of configuration Debug for project Learning ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o test.o "..\\test.cpp" 
+g++ -o Learning.exe test.o 
+C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot open output file Learning.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+Info: Nothing to build for Systemtest
+Info: Nothing to build for Test
+12:39:51 **** Incremental Build of configuration Debug for project Learning ****
+Info: Internal Builder is used for build
+g++ -o Learning.exe test.o 
+C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot open output file Learning.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+Info: Nothing to build for Systemtest
+Info: Nothing to build for Test
+12:39:54 **** Incremental Build of configuration Debug for project Learning ****
+Info: Internal Builder is used for build
+g++ -o Learning.exe test.o 
+C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot open output file Learning.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+12:40:08 **** Incremental Build of configuration Debug for project Learning ****
+Info: Internal Builder is used for build
+g++ -o Learning.exe test.o 
+C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot open output file Learning.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+12:40:25 **** Incremental Build of configuration Debug for project Learning ****
+Info: Internal Builder is used for build
+g++ -o Learning.exe test.o 
+Info: Nothing to build for Systemtest
+Info: Nothing to build for Test
+12:42:49 **** Incremental Build of configuration Debug for project Learning ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o test.o "..\\test.cpp" 
+g++ -o Learning.exe test.o 
+Info: Nothing to build for Systemtest
+Info: Nothing to build for Test
+Info: Nothing to build for Learning
+12:43:14 **** Incremental Build of configuration Debug for project Learning ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o test.o "..\\test.cpp" 
+g++ -o Learning.exe test.o 
+Info: Nothing to build for Learning
+13:14:40 **** Incremental Build of configuration Debug for project Learning ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o test.o "..\\test.cpp" 
+..\test.cpp:15:2: error: expected ';' after class definition
+   15 | }
+      |  ^
+      |  ;
+Info: Nothing to build for Systemtest
+Info: Nothing to build for Test
+13:15:59 **** Incremental Build of configuration Debug for project Learning ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o test.o "..\\test.cpp" 
+..\test.cpp:15:2: error: expected ';' after class definition
+   15 | }
+      |  ^
+      |  ;
+Info: Nothing to build for Systemtest
+Info: Nothing to build for Test
+13:16:03 **** Incremental Build of configuration Debug for project Learning ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o test.o "..\\test.cpp" 
+..\test.cpp:15:2: error: expected ';' after class definition
+   15 | }
+      |  ^
+      |  ;
+13:16:18 **** Incremental Build of configuration Debug for project Learning ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o test.o "..\\test.cpp" 
+g++ -o Learning.exe test.o 
+Info: Nothing to build for Systemtest
+Info: Nothing to build for Test
+Info: Nothing to build for Learning
+13:18:01 **** Incremental Build of configuration Debug for project Learning ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o test.o "..\\test.cpp" 
+g++ -o Learning.exe test.o 
+13:18:16 **** Incremental Build of configuration Debug for project Learning ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o test.o "..\\test.cpp" 
+g++ -o Learning.exe test.o 
+13:20:43 **** Incremental Build of configuration Debug for project Learning ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o test.o "..\\test.cpp" 
+..\test.cpp: In function 'int main()':
+..\test.cpp:23:16: error: type 'class Auto' argument given to 'delete', expected pointer
+   23 |         delete meinPorsche;
+      |                ^~~~~~~~~~~
+13:21:46 **** Incremental Build of configuration Debug for project Learning ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o test.o "..\\test.cpp" 
+g++ -o Learning.exe test.o 
+13:24:52 **** Incremental Build of configuration Debug for project Learning ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o test.o "..\\test.cpp" 
+..\test.cpp: In member function 'int Auto::fahreStrecke(int)':
+..\test.cpp:19:37: error: only constructors take member initializers
+   19 |         fahreStrecke(int strecke) : kilometerstand(kilometerstand + strecke) {
+      |                                     ^~~~~~~~~~~~~~
+..\test.cpp:21:9: warning: no return statement in function returning non-void [-Wreturn-type]
+   21 |         }
+      |         ^
+13:27:17 **** Incremental Build of configuration Debug for project Learning ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o test.o "..\\test.cpp" 
+..\test.cpp: In member function 'int Auto::fahreStrecke(int)':
+..\test.cpp:22:9: warning: no return statement in function returning non-void [-Wreturn-type]
+   22 |         }
+      |         ^
+g++ -o Learning.exe test.o 
+13:27:30 **** Incremental Build of configuration Debug for project Learning ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o test.o "..\\test.cpp" 
+g++ -o Learning.exe test.o 
+13:58:10 **** Incremental Build of configuration Debug for project Learning ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o test.o "..\\test.cpp" 
+..\test.cpp:56:2: error: expected '}' at end of input
+   56 | }
+      |  ^
+..\test.cpp:5:12: note: to match this '{'
+    5 | class Auto {
+      |            ^
+..\test.cpp: In member function 'int Auto::main()':
+..\test.cpp:56:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   56 | }
+      | ^
+..\test.cpp: At global scope:
+..\test.cpp:56:2: error: expected unqualified-id at end of input
+   56 | }
+      |  ^
+13:59:43 **** Incremental Build of configuration Debug for project Learning ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o test.o "..\\test.cpp" 
+..\test.cpp:56:2: error: expected '}' at end of input
+   56 | }
+      |  ^
+..\test.cpp:5:12: note: to match this '{'
+    5 | class Auto {
+      |            ^
+..\test.cpp: In member function 'int Auto::main()':
+..\test.cpp:56:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   56 | }
+      | ^
+..\test.cpp: At global scope:
+..\test.cpp:56:2: error: expected unqualified-id at end of input
+   56 | }
+      |  ^
+14:37:01 **** Incremental Build of configuration Debug for project Learning ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o test.o "..\\test.cpp" 
+..\test.cpp: In function 'int main()':
+..\test.cpp:42:17: error: 'zeigeStatus' was not declared in this scope
+   42 |                 zeigeStatus();
+      |                 ^~~~~~~~~~~
+14:37:53 **** Incremental Build of configuration Debug for project Learning ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o test.o "..\\test.cpp" 
+g++ -o Learning.exe test.o 
+14:41:31 **** Incremental Build of configuration Debug for project Learning ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o test.o "..\\test.cpp" 
+..\test.cpp: In member function 'void Auto::zeigeStatus(int, int, int)':
+..\test.cpp:25:55: error: expected ':' before ';' token
+   25 |                 showmarke == 1 ? cout << marke << endl;
+      |                                                       ^
+..\test.cpp:25:55: error: expected primary-expression before ';' token
+..\test.cpp:26:17: error: 'showFarbe' was not declared in this scope; did you mean 'showfarbe'?
+   26 |                 showFarbe == 1 ? cout << farbe << endl;
+      |                 ^~~~~~~~~
+      |                 showfarbe
+..\test.cpp:26:55: error: expected ':' before ';' token
+   26 |                 showFarbe == 1 ? cout << farbe << endl;
+      |                                                       ^
+..\test.cpp:26:55: error: expected primary-expression before ';' token
+..\test.cpp:27:73: error: expected ':' before ';' token
+   27 |                 showkilometerstand == 1 ? cout << kilometerstand << endl;
+      |                                                                         ^
+..\test.cpp:27:73: error: expected primary-expression before ';' token
+14:44:52 **** Incremental Build of configuration Debug for project Learning ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o test.o "..\\test.cpp" 
+g++ -o Learning.exe test.o 
+14:49:46 **** Incremental Build of configuration Debug for project Learning ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o test.o "..\\test.cpp" 
+..\test.cpp: In function 'int main()':
+..\test.cpp:40:44: error: expected primary-expression before 'break'
+   40 |                 inp_loop == 'y' ? void() : break;
+      |                                            ^~~~~
+14:50:32 **** Incremental Build of configuration Debug for project Learning ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o test.o "..\\test.cpp" 
+..\test.cpp: In function 'int main()':
+..\test.cpp:40:35: error: expected primary-expression before 'void'
+   40 |                 inp_loop == 'y' ? void : break;
+      |                                   ^~~~
+..\test.cpp:40:34: error: expected ':' before 'void'
+   40 |                 inp_loop == 'y' ? void : break;
+      |                                  ^~~~~
+      |                                  :
+..\test.cpp:40:35: error: expected primary-expression before 'void'
+   40 |                 inp_loop == 'y' ? void : break;
+      |                                   ^~~~
+14:53:24 **** Incremental Build of configuration Debug for project Learning ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o test.o "..\\test.cpp" 
+..\test.cpp: In function 'int main()':
+..\test.cpp:40:17: warning: 'inp_loop' is used uninitialized [-Wuninitialized]
+   40 |                 if (inp_loop != 'y') break;
+      |                 ^~
+..\test.cpp:38:22: note: 'inp_loop' was declared here
+   38 |                 char inp_loop;
+      |                      ^~~~~~~~
+g++ -o Learning.exe test.o 
+14:53:58 **** Incremental Build of configuration Debug for project Learning ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o test.o "..\\test.cpp" 
+g++ -o Learning.exe test.o 
+C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot open output file Learning.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+14:54:35 **** Incremental Build of configuration Debug for project Learning ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o test.o "..\\test.cpp" 
+g++ -o Learning.exe test.o 
+C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot open output file Learning.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+14:54:36 **** Incremental Build of configuration Debug for project Learning ****
+Info: Internal Builder is used for build
+g++ -o Learning.exe test.o 
+C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot open output file Learning.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+14:55:35 **** Incremental Build of configuration Debug for project Learning ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o test.o "..\\test.cpp" 
+g++ -o Learning.exe test.o 
+C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot open output file Learning.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+14:56:03 **** Incremental Build of configuration Debug for project Learning ****
+Info: Internal Builder is used for build
+g++ -o Learning.exe test.o 
+14:58:16 **** Incremental Build of configuration Debug for project Learning ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o test.o "..\\test.cpp" 
+g++ -o Learning.exe test.o 
+C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot open output file Learning.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+14:59:57 **** Incremental Build of configuration Debug for project Learning ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o test.o "..\\test.cpp" 
+g++ -o Learning.exe test.o 
+C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot open output file Learning.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+15:01:03 **** Incremental Build of configuration Debug for project Learning ****
+Info: Internal Builder is used for build
+g++ -o Learning.exe test.o 
+15:03:02 **** Incremental Build of configuration Debug for project Learning ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o test.o "..\\test.cpp" 
+g++ -o Learning.exe test.o 
+15:05:35 **** Incremental Build of configuration Debug for project Learning ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o test.o "..\\test.cpp" 
+g++ -o Learning.exe test.o 
+15:07:00 **** Incremental Build of configuration Debug for project Learning ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o test.o "..\\test.cpp" 
+g++ -o Learning.exe test.o 
+C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot open output file Learning.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+15:09:26 **** Incremental Build of configuration Debug for project Learning ****
+Info: Internal Builder is used for build
+g++ -o Learning.exe test.o 
+15:13:04 **** Incremental Build of configuration Debug for project Learning ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o test.o "..\\test.cpp" 
+..\test.cpp: In member function 'void Auto::fahreStrecke(unsigned int)':
+..\test.cpp:20:49: warning: suggest parentheses around arithmetic in operand of '^' [-Wparentheses]
+   20 |                 kilometerstand + strecke > 2^32 - 1 ? "Wert zu hoch!!!" : kilometerstand += strecke;
+      |                                              ~~~^~~
+..\test.cpp:20:53: error: operands to '?:' have different types 'const char*' and 'unsigned int'
+   20 |                 kilometerstand + strecke > 2^32 - 1 ? "Wert zu hoch!!!" : kilometerstand += strecke;
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+15:13:41 **** Incremental Build of configuration Debug for project Learning ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o test.o "..\\test.cpp" 
+..\test.cpp: In member function 'void Auto::fahreStrecke(unsigned int)':
+..\test.cpp:20:49: warning: suggest parentheses around arithmetic in operand of '^' [-Wparentheses]
+   20 |                 kilometerstand + strecke > 2^32 - 1 ? kilometerstand : kilometerstand += strecke;
+      |                                              ~~~^~~
+g++ -o Learning.exe test.o 
+15:18:47 **** Incremental Build of configuration Debug for project Learning ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o test.o "..\\test.cpp" 
+..\test.cpp: In member function 'void Auto::fahreStrecke(unsigned int)':
+..\test.cpp:25:17: error: expected ';' before '}' token
+   25 |                 }
+      |                 ^
+15:18:55 **** Incremental Build of configuration Debug for project Learning ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o test.o "..\\test.cpp" 
+g++ -o Learning.exe test.o 
+C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot open output file Learning.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+15:19:05 **** Incremental Build of configuration Debug for project Learning ****
+Info: Internal Builder is used for build
+g++ -o Learning.exe test.o 
+15:19:59 **** Incremental Build of configuration Debug for project Learning ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o test.o "..\\test.cpp" 
+g++ -o Learning.exe test.o 
+15:38:24 **** Incremental Build of configuration Debug for project Learning ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o test.o "..\\test.cpp" 
+..\test.cpp: In function 'int main()':
+..\test.cpp:36:18: warning: unused variable 'inp_strecke' [-Wunused-variable]
+   36 |         unsigned inp_strecke;
+      |                  ^~~~~~~~~~~
+g++ -o Learning.exe test.o 
+15:39:00 **** Incremental Build of configuration Debug for project Learning ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o test.o "..\\test.cpp" 
+..\test.cpp: In function 'int main()':
+..\test.cpp:36:18: warning: unused variable 'inp_strecke' [-Wunused-variable]
+   36 |         unsigned inp_strecke;
+      |                  ^~~~~~~~~~~
+g++ -o Learning.exe test.o 
+15:39:17 **** Incremental Build of configuration Debug for project Learning ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o test.o "..\\test.cpp" 
+g++ -o Learning.exe test.o 
+15:40:04 **** Incremental Build of configuration Debug for project Learning ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o test.o "..\\test.cpp" 
+g++ -o Learning.exe test.o 
+16:55:54 **** Incremental Build of configuration Debug for project Learning ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o test.o "..\\test.cpp" 
+..\test.cpp:8:14: error: flexible array member 'Projekt::Kosten' not at end of 'class Projekt'
+    8 |         int* Kosten[];
+      |              ^~~~~~
+16:57:28 **** Incremental Build of configuration Debug for project Learning ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o test.o "..\\test.cpp" 
+g++ -o Learning.exe test.o 
+Info: Nothing to build for Learning
+14:32:13 **** Rebuild of configuration Debug for project KGÜ_1 ****
+Info: Internal Builder is used for build
+gcc "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o test.o "..\\test.c" 
+gcc "-LC:\\boost\\libs" -o KGÜ_1.exe test.o -lws2_32 
+C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/libmingw32.a(lib64_libmingw32_a-crtexewin.o):crtexewin.c:(.text.startup+0xbd): undefined reference to `WinMain'
+collect2.exe: error: ld returned 1 exit status
+14:32:14 **** Incremental Build of configuration Debug for project Learning ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o test.o "..\\test.cpp" 
+g++ -o Learning.exe test.o 
+Info: Nothing to build for Systemtest
+Info: Nothing to build for Test
+14:34:05 **** Incremental Build of configuration Debug for project KGÜ_1 ****
+Info: Internal Builder is used for build
+gcc "-LC:\\boost\\libs" -o KGÜ_1.exe test.o -lws2_32 
+C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/libmingw32.a(lib64_libmingw32_a-crtexewin.o):crtexewin.c:(.text.startup+0xbd): undefined reference to `WinMain'
+collect2.exe: error: ld returned 1 exit status
+14:38:03 **** Incremental Build of configuration Debug for project KGÜ_1 ****
+Info: Internal Builder is used for build
+gcc "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o test.o "..\\test.c" 
+gcc "-LC:\\boost\\libs" -o KGÜ_1.exe test.o -lws2_32 
+Info: Nothing to build for KGÜ_1
+Info: Nothing to build for Test
+Info: Nothing to build for Test
+Info: Nothing to build for KGÜ_1
+14:52:30 **** Incremental Build of configuration Debug for project KGÜ_1 ****
+Info: Internal Builder is used for build
+gcc "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o test.o "..\\test.c" 
+gcc "-LC:\\boost\\libs" -o KGÜ_1.exe test.o -lws2_32 
+Info: Nothing to build for KGÜ_1
+Info: Nothing to build for Learning
+Info: Nothing to build for Systemtest
+Info: Nothing to build for Test
+15:22:15 **** Incremental Build of configuration Debug for project KGÜ_1 ****
+Info: Internal Builder is used for build
+gcc "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o test.o "..\\test.c" 
+..\test.c: In function 'main':
+..\test.c:2:17: error: expected expression before '=' token
+    2 | #define DELTA_A = 1;
+      |                 ^
+..\test.c:12:17: note: in expansion of macro 'DELTA_A'
+   12 |         a = a + DELTA_A;
+      |                 ^~~~~~~
+..\test.c:13:21: error: expected ';' before 'fl\U000000e4che'
+   13 |         umfang = 4*a
+      |                     ^
+      |                     ;
+   14 |         fläche = a*a;
+      |         ~~~~~~       
+..\test.c:15:93: error: 'Umfang' undeclared (first use in this function); did you mean 'umfang'?
+   15 |         printf("Seitenlaenge = %d cm \t=> Fläche = %d cmA2 \t und Umfang = %d cm/n",fläche, Umfang);
+      |                                                                                             ^~~~~~
+      |                                                                                             umfang
+..\test.c:15:93: note: each undeclared identifier is reported only once for each function it appears in
+..\test.c:17:1: error: expected declaration or statement at end of input
+   17 | } while (umfang != fläche);
+      | ^
+15:24:16 **** Incremental Build of configuration Debug for project KGÜ_1 ****
+Info: Internal Builder is used for build
+gcc "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o test.o "..\\test.c" 
+..\test.c: In function 'main':
+..\test.c:15:93: error: 'Umfang' undeclared (first use in this function); did you mean 'umfang'?
+   15 |         printf("Seitenlaenge = %d cm \t=> Fläche = %d cmA2 \t und Umfang = %d cm/n",fläche, Umfang);
+      |                                                                                             ^~~~~~
+      |                                                                                             umfang
+..\test.c:15:93: note: each undeclared identifier is reported only once for each function it appears in
+15:24:49 **** Incremental Build of configuration Debug for project KGÜ_1 ****
+Info: Internal Builder is used for build
+gcc "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o test.o "..\\test.c" 
+..\test.c: In function 'main':
+..\test.c:15:93: error: 'Umfang' undeclared (first use in this function); did you mean 'umfang'?
+   15 |         printf("Seitenlaenge = %d cm \t=> Fläche = %d cmA2 \t und Umfang = %d cm/n",fläche, Umfang);
+      |                                                                                             ^~~~~~
+      |                                                                                             umfang
+..\test.c:15:93: note: each undeclared identifier is reported only once for each function it appears in
+Info: Nothing to build for Learning
+Info: Nothing to build for Systemtest
+Info: Nothing to build for Test
+15:24:53 **** Incremental Build of configuration Debug for project KGÜ_1 ****
+Info: Internal Builder is used for build
+gcc "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o test.o "..\\test.c" 
+..\test.c: In function 'main':
+..\test.c:15:77: warning: format '%d' expects a matching 'int' argument [-Wformat=]
+   15 |         printf("Seitenlaenge = %d cm \t=> Fläche = %d cmA2 \t und Umfang = %d cm/n", fläche, umfang);
+      |                                                                            ~^
+      |                                                                             |
+      |                                                                             int
+gcc "-LC:\\boost\\libs" -o KGÜ_1.exe test.o -lws2_32 
+15:25:23 **** Incremental Build of configuration Debug for project KGÜ_1 ****
+Info: Internal Builder is used for build
+gcc "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o test.o "..\\test.c" 
+gcc "-LC:\\boost\\libs" -o KGÜ_1.exe test.o -lws2_32 

@@ -1,0 +1,19 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Auto {
+private : // hinschreiben zur Übersicht oder nicht weil Standard
+	string marke;
+	string farbe;
+	int kilometerstand;
+public:
+	Auto(string marke, string farbe) : marke(marke), farbe(farbe), kilometerstand(0) {
+		cout << marke << ' ' << farbe << ' ' << kilometerstand << endl;
+	}
+
+};
+
+int main() {
+	Auto meinPorsche("Porsche", "Rot");
+}

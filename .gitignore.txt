@@ -1,0 +1,12 @@
+# Compiler-Ausgaben
+*.exe
+*.o
+*.obj
+*.out
+
+# IDE-spezifische Ordner (Visual Studio / VS Code)
+.vscode/
+.vs/
+bin/
+obj/
+out/

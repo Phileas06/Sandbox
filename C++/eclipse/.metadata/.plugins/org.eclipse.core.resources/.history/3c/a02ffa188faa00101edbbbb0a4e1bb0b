@@ -1,0 +1,67 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Auto {
+private : // hinschreiben zur Übersicht oder nicht weil Standard
+	string marke;
+	string farbe;
+	int kilometerstand;
+public:
+	Auto(string marke, string farbe) : marke(marke), farbe(farbe), kilometerstand(0) { // member initializer only here allowed
+		cout << marke << ' ' << farbe << ' ' << kilometerstand << endl;
+	}
+
+	~Auto() {
+		cout << "Das Auto wurde verschrottet." << endl;
+	}
+
+	void fahreStrecke(int strecke) {
+		kilometerstand += strecke;
+		cout << "Gefahrene Strecke: " << strecke << ' ' << "Kilometerstand Neu: " << kilometerstand << endl;
+	}
+
+	void zeigeStatus(int showmarke = 1, int showfarbe = 1, int showkilometerstand = 1) {
+		if (showmarke) cout << marke << endl;
+		if (showfarbe) cout << farbe << endl;
+		if (showkilometerstand) cout << kilometerstand << endl;
+	}
+
+};
+
+int main() {
+	int inp_strecke;
+	int inp_status;
+	Auto meinPorsche("Porsche", "Rot");
+
+	while (true) {
+		char inp_loop;
+		cout << "Willst du mit dem Auto fahren? [y] | [any key]" << endl;
+		inp_loop == 'y' ? void : break;
+		cout << "Wie weit willst du fahren?" << endl;
+		cin >> inp_strecke;
+		meinPorsche.fahreStrecke(inp_strecke);
+
+	}
+
+	cout << "Zeige Status: " << endl << "[0] Zeige alle" << endl << "[1] Marke" << endl << "[2] Farbe" << endl << "[3] Kilometerstand" << endl;
+	cin >> inp_status;
+
+	switch (inp_status) {
+
+	case 0:
+		meinPorsche.zeigeStatus();
+		break;
+	case '1':
+		meinPorsche.zeigeStatus(1,0,0);
+		break;
+	case '2':
+		meinPorsche.zeigeStatus(0,1,0);
+		break;
+	case '3':
+		meinPorsche.zeigeStatus(0,0,1);
+		break;
+default:
+	cout << "Eingabe war nicht valide!" << endl;
+	}
+}

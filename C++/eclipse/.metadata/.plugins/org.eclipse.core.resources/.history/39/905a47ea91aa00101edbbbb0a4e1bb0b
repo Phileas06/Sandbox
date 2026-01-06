@@ -1,0 +1,73 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Auto {
+private : // hinschreiben zur Übersicht oder nicht weil Standard
+	string marke;
+	string farbe;
+	unsigned kilometerstand;
+public:
+	Auto(string marke, string farbe) : marke(marke), farbe(farbe), kilometerstand(0) { // member initializer only here allowed
+		cout << marke << ' ' << farbe << ' ' << kilometerstand << endl;
+	}
+
+	~Auto() {
+		cout << "Das Auto wurde verschrottet." << endl;
+	}
+
+	void fahreStrecke(unsigned strecke) {
+		kilometerstand + strecke > 2^32 - 1 ? "Wert zu hoch!!!" : kilometerstand += strecke;
+		cout << "Gefahrene Strecke: " << strecke << ' ' << "Kilometerstand Neu: " << kilometerstand << endl;
+	}
+
+	void zeigeStatus(int showmarke = 1, int showfarbe = 1, int showkilometerstand = 1) {
+		if (showmarke) cout << marke << endl;
+		if (showfarbe) cout << farbe << endl;
+		if (showkilometerstand) cout << kilometerstand << endl;
+	}
+
+};
+
+int main() {
+	unsigned inp_strecke;
+	int inp_status;
+	char inp_loop;
+	Auto meinPorsche("Porsche", "Rot");
+
+	while (true) {
+		cout << "Willst du mit dem Auto fahren? [y] | [any key]" << endl;
+		cin >> inp_loop;
+		if (inp_loop != 'y') break;
+		cout << "Wie weit willst du fahren?" << endl;
+		cin >> inp_strecke;
+		if (cin.fail()) {
+			cin.clear();
+			cout << "Gib nicht so hohe Werte ein!";
+			continue;
+		}
+		meinPorsche.fahreStrecke(inp_strecke);
+
+	}
+
+	cout << "Zeige Status: " << endl << "[0] Zeige alle" << endl << "[1] Marke" << endl << "[2] Farbe" << endl << "[3] Kilometerstand" << endl;
+	cin >> inp_status;
+
+	switch (inp_status) {
+
+	case 0:
+		meinPorsche.zeigeStatus();
+		break;
+	case 1:
+		meinPorsche.zeigeStatus(1,0,0);
+		break;
+	case 2:
+		meinPorsche.zeigeStatus(0,1,0);
+		break;
+	case 3:
+		meinPorsche.zeigeStatus(0,0,1);
+		break;
+default:
+	cout << "Eingabe war nicht valide!" << endl;
+	}
+}

@@ -1,0 +1,48 @@
+#include <iostream>
+#include <string>
+#include <cstdint>
+using namespace std;
+
+class Auto {
+private : // hinschreiben zur Übersicht oder nicht weil Standard
+	string marke;
+	string farbe;
+	unsigned kilometerstand;
+public:
+	Auto(string marke, string farbe) : marke(marke), farbe(farbe), kilometerstand(0) { // member initializer only here allowed
+		cout << marke << ' ' << farbe << ' ' << kilometerstand << endl;
+	}
+
+	~Auto() {
+		cout << "Das Auto wurde verschrottet." << endl;
+	}
+
+	void fahreStrecke(unsigned strecke) {
+		if (kilometerstand + strecke <= UINT32_MAX) {
+			kilometerstand += strecke;
+		} else {
+			cout << "Kilometerstand ist zu hoch!";
+		}
+		cout << "Gefahrene Strecke: " << strecke << ' ' << "Kilometerstand Neu: " << kilometerstand << endl << endl;
+	}
+
+	void zeigeStatus() {
+		cout << "Marke: " << marke << endl << "Farbe: " << farbe << endl << "Kilometerstand: " << kilometerstand << endl;
+	}
+
+};
+
+int main() {
+	unsigned inp_strecke;
+
+	Auto meinPorsche("Porsche", "Rot");
+
+	meinPorsche.zeigeStatus();
+
+	meinPorsche.fahreStrecke(100);
+	meinPorsche.fahreStrecke(1000);
+
+	meinPorsche.zeigeStatus();
+
+	return 0;
+}

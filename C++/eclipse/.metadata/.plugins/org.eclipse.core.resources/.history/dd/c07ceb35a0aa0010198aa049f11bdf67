@@ -1,0 +1,30 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Projekt {
+private:
+	string name = "";
+	int* Kosten[];
+	const int AnzahlPhasen = 3;
+
+public:
+	Projekt(string name) : name(name) {
+		for (size_t i = 0; i < 3; i++) {
+			Kosten[i] = new int;
+		}
+	}
+
+	~Projekt() {
+		for (size_t i = 0; i < 3; i++) {
+			delete Kosten[i];
+			Kosten[i] = nullptr;
+		}
+
+	}
+};
+
+int main() {
+
+	return 0;
+}

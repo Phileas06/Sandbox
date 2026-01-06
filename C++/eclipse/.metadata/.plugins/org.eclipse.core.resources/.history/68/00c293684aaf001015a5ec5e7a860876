@@ -1,0 +1,17 @@
+#include <stdio.h>
+#define DELTA_A = 1;
+
+int main() {
+
+
+int umfang, fläche, a;
+
+a = 0;
+
+do {
+	a = a + DELTA_A;
+	umfang = 4*a
+	fläche = a*a;
+	printf("Seitenlaenge = %d cm \t=> Fläche = %d cmA2 \t und Umfang = %d cm/n",fläche, Umfang);
+
+} while (umfang != fläche);

@@ -1,0 +1,59 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Projekt {
+private:
+	string name = "";
+	int* Kosten[];
+	const int AnzahlPhasen = 3;
+
+public:
+	Projekt(string name) : name(name) {
+		for (size_t i = 0; i < 3; i++) {
+			Kosten[i] = new int;
+		}
+	}
+
+	~Projekt() {
+		for (size_t i = 0; i < 3; i++) {
+			delete Kosten[i];
+			Kosten[i] = nullptr;
+		}
+
+	}
+
+	void eingabeKosten(int phase, int kosten) {
+		*Kosten[phase] = kosten;
+	}
+
+	string getName() {
+		return name;
+	}
+
+	int getCost(int phase) {
+		return *Kosten[phase];
+	}
+};
+
+int main() {
+	int inp_val;
+	Projekt Baustelle1("bruchbude");
+	cout << "Gib die Kosten für die Planung an: " << endl;
+	cin >> inp_val;
+	Baustelle1.eingabeKosten(0, inp_val);
+	cout << "Gib die Kosten für das Fundament an: " << endl;
+	cin >> inp_val;
+	Baustelle1.eingabeKosten(1, inp_val);
+	cout << "Gib die Kosten für den Bau an: " << endl;
+	cin >> inp_val;
+	Baustelle1.eingabeKosten(2, inp_val);
+
+
+	cout << endl << endl << "Name: " << Baustelle1.getName() << endl << "Kosten: " << endl;
+	for (size_t i = 0; i < 3; i++) {
+		cout << "Kosten: " << Baustelle1.getCost(i) << endl;
+	}
+
+	return 0;
+}
