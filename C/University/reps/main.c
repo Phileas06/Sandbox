@@ -1,13 +1,36 @@
 #include <stdio.h>
+#include <math.h>
 
-int main() {
+struct Punkt
+{
+    double x;
+    double y;
+};
 
-    char text[99];
+struct Rechteck
+{
+    struct Punkt obenLinks;
+    struct Punkt untenRechts;
+};
 
-    sprintf(text, "Hallo wie geht es dir?");
+double berechneFlaeche(struct Rechteck *rechteck)
+{
+    double xLength = abs(rechteck->obenLinks.x - rechteck->untenRechts.x);
+    double yLength = abs(rechteck->obenLinks.y - rechteck->untenRechts.y);
 
+    return xLength * yLength;
+}
 
-    printf("%s", text);
+int main()
+{
+
+    struct Rechteck rechteck1;
+    rechteck1.obenLinks.x = -1;
+    rechteck1.obenLinks.y = 1;
+    rechteck1.untenRechts.x = 1;
+    rechteck1.untenRechts.y = -1;
+
+    printf("%lf", berechneFlaeche(&rechteck1));
 
     return 0;
 }
